@@ -1,0 +1,58 @@
+<%= flash[:notice] %>
+<table>
+    <thead>
+        <tr>
+            <th>Patient ID</th>
+            <th>Order Provider</th>
+            <th>Order Name</th>
+            <th>Lab Date</th>
+            <th>Lab Order Detail</th>
+            <th>Lab Analyte</th>
+            <th>Lab Order Type</th>
+            <th>Lab Value</th>
+            <th>Lab Interpretation</th>
+            <th>Order ID</th>
+            <th>Order Source</th>
+            <th>Lab Local Temp List</th>
+            <th>Lab Order Genus</th>
+            <th>Lab Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @users.each do |user| %>
+            <tr>
+                <td><%= user.patient_id %></td>
+                <td><%= user.order_provider %></td>
+                <td><%= user.order_name %></td>
+                <td><%= user.lab_date %></td>
+                <td><%= user.lab_ord_dtl %></td>
+                <td><%= user.lab_analyte %></td>
+                <td><%= user.lab_order_type %></td>
+                <td><%= user.lab_value %></td>
+                <td><%= user.lab_interpretation %></td>
+                <td><%= user.order_id %></td>
+                <td><%= user.order_src %></td>
+                <td><%= user.lab_local_temp_list %></td>
+                <td><%= user.lab_order_genus %></td>
+                <td><%= user.lab_status %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+<div>
+    <h4>Import CSV File</h4>
+    <%= form_tag import_user_path, multipart: true do %>
+        <%= file_field_tag :file %>
+        <%= submit_tag "Import CSV" %>
+    <% end %>
+</div>
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
