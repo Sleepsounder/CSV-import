@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: MyString
+  order_provider: MyString
+  order_name: MyString
+  lab_date: 2019-07-19
+  lab_ord_dtl: MyString
+  lab_analyte: MyString
+  lab_order_type: MyString
+  lab_value: MyString
+  lab_interpretation: MyString
+  order_id: 1
+  order_src: MyString
+  lab_local_temp_list: MyString
+  lab_order_genus: MyString
+  lab_status: MyString
+
+two:
+  patient_id: MyString
+  order_provider: MyString
+  order_name: MyString
+  lab_date: 2019-07-19
+  lab_ord_dtl: MyString
+  lab_analyte: MyString
+  lab_order_type: MyString
+  lab_value: MyString
+  lab_interpretation: MyString
+  order_id: 1
+  order_src: MyString
+  lab_local_temp_list: MyString
+  lab_order_genus: MyString
+  lab_status: MyString
