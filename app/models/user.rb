@@ -3,9 +3,8 @@ class User < ApplicationRecord
     require 'smarter_csv'
 
     def self.import(file)
-        # data = SmarterCSV.process(file.path)
         data = SmarterCSV.process(file.path, { :quote_char => '"', :delimiter => ',',
-        :force_quotes => true })
+        :force_quotes => true, :skip_lines => 1 } )
         puts "#{data} + ***************************************"
         # CSV.foreach(file.path, headers: true) do |row|
         #     data = row.to_hash
