@@ -5,39 +5,37 @@ class User < ApplicationRecord
     def self.import(file)
         data = SmarterCSV.process(file.path, { :quote_char => '"', :delimiter => ',',
         :force_quotes => true, :skip_lines => 1 } )
-        puts "#{data} + ***************************************"
-        # CSV.foreach(file.path, headers: true) do |row|
-        #     data = row.to_hash
-        #     # newdata = data.slice("Duder", "Steps", "Distance", "Exercise", "Sleep", "Calories")
-        #     key_map = { "Patient ID" => "patient_id",  
-        #     "ordr provdr" => "order_provider", 
-        #     "order name" => "order_name", 
-        #     "labdate" => "lab_date", 
-        #     "lab ord dtl" => "lab_ord_dtl", 
-        #     "labanalyte" => "lab_analyte", 
-        #     "labordertype" => "lab_order_type", 
-        #     "labvalue" => "lab_value",
-        #     "labinterpretation" => "lab_interpretation",
-        #     "order id" => "order_id",
-        #     "order src" => "order_src",
-        #     "lablocaltemplist" => "lab_local_temp_list",
-        #     "labordergenus" => "lab_order_genus",
-        #     "labstatus" => "lab_status" }
-        #     User.create! data.transform_keys! { |k| key_map[k]}     
-        # end
+        key_map = { patient_id: => patient_id:,  
+        ordr_provdr: => order_provider:, 
+        order_name: => order_name:, 
+        labdate: => lab_date:, 
+        lab_ord_dtl: => lab_ord_dtl:, 
+        labanalyte: => lab_analyte:, 
+        labordertype: => lab_order_type:, 
+        labvalue: => lab_value:,
+        labinterpretation: => lab_interpretation:,
+        order_id: => order_id:,
+        order_src: => order_src:,
+        lablocaltemplist: => lab_local_temp_list:,
+        labordergenus: => lab_order_genus:,
+        labstatus: => lab_status: }
+        # puts "#{data} + ***************************************"
+        User.create! data.transform_keys! { |k| key_map[k]}  
+        # User.create! data    
+   
     end
 end
-# Patient ID,
-# ordr provdr,
-# order name,
+# patient_id,
+# ordr_provdr,
+# order_name,
 # labdate,
-# lab ord dtl,
+# lab_ord_dtl,
 # labanalyte,
 # labordertype,
 # labvalue,
 # labinterpretation,
-# order id,
-# order src,
+# order_id,
+# order_src,
 # lablocaltemplist,
 # labordergenus,
 # labstatus
