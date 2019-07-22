@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_19_150851) do
+ActiveRecord::Schema.define(version: 2019_07_19_184150) do
 
   create_table "users", force: :cascade do |t|
     t.string "patient_id"
     t.string "order_provider"
     t.string "order_name"
-    t.date "lab_date"
+    t.string "lab_date"
     t.string "lab_ord_dtl"
     t.string "lab_analyte"
     t.string "lab_order_type"
