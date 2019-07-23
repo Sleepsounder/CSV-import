@@ -1,40 +1,41 @@
 <%= flash[:notice] %>
+<h1 style="background-color:blue;color:white;text-align:center;padding:1rem;border:3px solid black">Rutgers CSV Upload</h1>
 <table>
     <thead>
-        <tr>
-            <th>Patient ID</th>
-            <th>Order Provider</th>
-            <th>Order Name</th>
-            <th>Lab Date</th>
-            <th>Lab Order Detail</th>
-            <th>Lab Analyte</th>
-            <th>Lab Order Type</th>
-            <th>Lab Value</th>
-            <th>Lab Interpretation</th>
-            <th>Order ID</th>
-            <th>Order Source</th>
-            <th>Lab Local Temp List</th>
-            <th>Lab Order Genus</th>
-            <th>Lab Status</th>
+        <tr style="background-color:blue;color:white">
+            <th style="border:1px solid black">Patient ID</th>
+            <th style="border:1px solid black">Order Provider</th>
+            <th style="border:1px solid black">Order Name</th>
+            <th style="border:1px solid black">Lab Date</th>
+            <th style="border:1px solid black">Lab Order Detail</th>
+            <th style="border:1px solid black">Lab Analyte</th>
+            <th style="border:1px solid black">Lab Order Type</th>
+            <th style="border:1px solid black">Lab Value</th>
+            <th style="border:1px solid black">Lab Interpretation</th>
+            <th style="border:1px solid black">Order ID</th>
+            <th style="border:1px solid black">Order Source</th>
+            <th style="border:1px solid black">Lab Local Temp List</th>
+            <th style="border:1px solid black">Lab Order Genus</th>
+            <th style="border:1px solid black">Lab Status</th>
         </tr>
     </thead>
     <tbody>
         <% @users.each do |user| %>
             <tr>
-                <td><%= user.patient_id %></td>
-                <td><%= user.order_provider %></td>
-                <td><%= user.order_name %></td>
-                <td><%= user.lab_date %></td>
-                <td><%= user.lab_ord_dtl %></td>
-                <td><%= user.lab_analyte %></td>
-                <td><%= user.lab_order_type %></td>
-                <td><%= user.lab_value %></td>
-                <td><%= user.lab_interpretation %></td>
-                <td><%= user.order_id %></td>
-                <td><%= user.order_src %></td>
-                <td><%= user.lab_local_temp_list %></td>
-                <td><%= user.lab_order_genus %></td>
-                <td><%= user.lab_status %></td>
+                <td style="border:1px solid black;padding:1rem"><%= user.patient_id %></td>
+                <td style="border:1px solid black;padding:1rem"><%= user.order_provider %></td>
+                <td style="border:1px solid black;padding:1rem"><%= user.order_name %></td>
+                <td style="border:1px solid black;padding:1rem"><%= user.lab_date %></td>
+                <td style="border:1px solid black;padding:1rem"><%= user.lab_ord_dtl %></td>
+                <td style="border:1px solid black;padding:1rem"><%= user.lab_analyte %></td>
+                <td style="border:1px solid black;padding:1rem"><%= user.lab_order_type %></td>
+                <td style="border:1px solid black;padding:1rem"><%= user.lab_value %></td>
+                <td style="border:1px solid black;padding:1rem"><%= user.lab_interpretation %></td>
+                <td style="border:1px solid black;padding:1rem"><%= user.order_id %></td>
+                <td style="border:1px solid black;padding:1rem"><%= user.order_src %></td>
+                <td style="border:1px solid black;padding:1rem"><%= user.lab_local_temp_list %></td>
+                <td style="border:1px solid black;padding:1rem"><%= user.lab_order_genus %></td>
+                <td style="border:1px solid black;padding:1rem"><%= user.lab_status %></td>
             </tr>
         <% end %>
     </tbody>

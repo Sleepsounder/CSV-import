@@ -23,46 +23,9 @@ class User < ApplicationRecord
         data.each do |h|
             newdata << h.map { |k, v| [key_map[k], v] }.to_h
         end
-        # puts "#{newdata} ***********************************************************"
         User.create! newdata
     end
 end
-# patient_id,
-# ordr_provdr,
-# order_name,
-# labdate,
-# lab_ord_dtl,
-# labanalyte,
-# labordertype,
-# labvalue,
-# labinterpretation,
-# order_id,
-# order_src,
-# lablocaltemplist,
-# labordergenus,
-# labstatus
-
-
-
-# patient_id
-# order_provider
-# order_name 
-# lab_date
-# lab_ord_dtl
-# lab_analyte 
-# lab_order_type 
-# lab_value
-# lab_interpretation 
-# order_id
-# order_src 
-# lab_local_temp_list
-# lab_order_genus 
-# lab_status 
-
-
-
-
-
 
 
 
