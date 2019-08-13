@@ -23,8 +23,7 @@ class User < ApplicationRecord
                                     :labordergenus => :lab_order_genus,
                                     :labstatus => :lab_status
         }})
-        
-        User.create! data
+        # User.create! data
     end
 end
 
@@ -71,3 +70,6 @@ end
 #         row.map { |k, v| [KEY_MAP[k], v] }.to_h
 #     end
 # end
+
+
+
